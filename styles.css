@@ -17,3 +17,10 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.card {
+  background-color: green;
+  height: 500px;
+  width: 400px;
+  text-align: left;
+}
