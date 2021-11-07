@@ -23,5 +23,7 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
   var data = response[0];
-  console.log(data);
+  image.src = data.url;
+  console.log(data.breeds[0]);
+
 });
