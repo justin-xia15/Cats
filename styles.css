@@ -2,25 +2,27 @@ body {
   text-align: center;
 }
 
+h2 {
+  margin-left: 5%;
+}
+
 img {
   height: 400px;
   width: 400px;
   margin-top: 10%;
 }
 
-button {
-  margin-top: 10%;
+p {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
 }
 
 .card {
-  background-color: green;
+  /* background-color: green; */
   height: 500px;
-  width: 400px;
   text-align: left;
 }
