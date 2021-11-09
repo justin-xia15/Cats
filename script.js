@@ -2,7 +2,8 @@ const button = document.querySelector(".new-image");
 const name = document.querySelector(".name");
 const origin = document.querySelector(".origin");
 const description = document.querySelector(".description");
-const temperament = document.querySelector(".temperament")
+const temperament = document.querySelector(".temperament");
+const options = document.querySelector(".select-options");
 
 var request = new XMLHttpRequest();
 
@@ -29,7 +30,7 @@ var list = {
 }
 
 // Image and info
-$.ajax(settings).done(function (response) {
+$.ajax(settings).done(function(response) {
   var data = response[0];
   var info = data.breeds[0];
   image.src = data.url;
@@ -42,7 +43,16 @@ $.ajax(settings).done(function (response) {
 });
 
 // List of breeds
-$.ajax(list).done(function (res) {
+$.ajax(list).done(function(res) {
   var data = res;
   console.log(data);
+
+  // Populate list with breeds
+  for (let i = 0; i < data.length; i++) {
+    var item = document.createElement("OPTION");
+    item.innerText = data[i].name;
+    options.appendChild(item);
+
+  }
+
 });
