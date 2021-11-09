@@ -51,8 +51,9 @@ $.ajax(list).done(function(res) {
   for (let i = 0; i < data.length; i++) {
     var item = document.createElement("OPTION");
     item.innerText = data[i].name;
+    item.setAttribute("id", data[i].id);
+    item.classList.add("breed");
     options.appendChild(item);
-
   }
 
 });
